@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Dia 1) | 2.- Crear un Avatar con html y JavaScript</title>
+
+    <style>
+      img {
+        box-shadow: 0 0 15px #9a0b33;
+        border-radius: 50%;
+      }
+      .avatar-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      .div-avatar {
+        position: relative;
+        border-color: black;
+        border-style: double;
+        border-radius: 15px;
+
+        box-shadow: 1px 1px 20px rgb(19, 37, 139);
+        padding: 15px;
+        margin: 15px;
+        justify-items: center;
+        align-items: center;
+      }
+      .text-username {
+        font-size: 18px;
+        font-weight: 700;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <h1
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          text-align: center;
+        "
+      >
+        AVATAR CON HTML Y JAVASCRIPT - 2do. Ejercicio
+      </h1>
+      <hr />
+      <div class="avatar-container"id="app"> </div>
+    
+
+    <script>
+      const $app = document.getElementById("app");
+      const Avatar = (params) => {
+        const src = `https://randomuser.me/api/portraits/${params.gender}/${params.id}.jpg`;
+        const name = params.name;
+
+        return `
+                <div class="div-avatar">
+                  <img src=${src} />
+                  <p class="text-username">${name}</p>
+                </div>  
+                `;        
+      };
+
+      $app.innerHTML += Avatar({id: 12, gender: 'women', name: 'Patricia'});
+      $app.innerHTML += Avatar({id: 31, gender: 'men', name: 'Carlos'});
+      $app.innerHTML += Avatar({id: 25, gender: 'women', name: 'Manuela'});
+      $app.innerHTML += Avatar({id: 66, gender: 'women', name: 'Linda'});
+      $app.innerHTML += Avatar({id: 18, gender: 'men', name: 'Luis Jose'});
+    </script>
+  </body>
+</html>

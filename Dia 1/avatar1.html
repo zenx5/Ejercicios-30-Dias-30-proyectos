@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Dia 1) | 1.- Crear un Avatar con html</title>
+
+    <style>
+      img {
+        box-shadow: 0 0 15px #9a0b33;
+        border-radius: 50%;
+      }
+      .avatar-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      .div-avatar {
+        position: relative;
+        border-color: black;
+        border-style: double;
+        border-radius: 15px;
+
+        box-shadow: 1px 1px 20px rgb(19, 37, 139);
+        padding: 15px;
+        margin: 15px;
+        justify-items: center;
+        align-items: center;
+      }
+      .text-username {
+        font-size: 18px;
+        font-weight: 700;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      style="
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      "
+    >
+      AVATAR CON HTML - 1er. Ejercicio
+    </h1>
+    <hr />
+    <div class="avatar-container">
+      <div class="div-avatar">
+        <img src="https://randomuser.me/api/portraits/women/70.jpg" />
+        <p class="text-username">Usuario 01</p>
+      </div>
+      <div class="div-avatar">
+        <img src="https://randomuser.me/api/portraits/men/57.jpg" />
+        <p class="text-username">Usuario 02</p>
+      </div>
+      <div class="div-avatar">
+        <img src="https://randomuser.me/api/portraits/men/70.jpg" />
+        <p class="text-username">Usuario 03</p>
+      </div>
+      <div class="div-avatar">
+        <img src="https://randomuser.me/api/portraits/women/57.jpg" />
+        <p class="text-username">Usuario 04</p>
+      </div>
+      <div class="div-avatar">
+        <img src="https://randomuser.me/api/portraits/men/7.jpg" />
+        <p class="text-username">Usuario 05</p>
+      </div>
+      <div class="div-avatar">
+        <img src="https://randomuser.me/api/portraits/women/69.jpg" />
+        <p class="text-username">Usuario 06</p>
+      </div>
+    </div>
+  </body>
+</html>
