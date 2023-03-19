@@ -34,6 +34,10 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
       }
+
+      picture.disabled {
+        opacity: 0.3;
+      }
     </style>
   </head>
   <body>
@@ -57,10 +61,10 @@
         const name = params.name;
 
         return `
-                <div class="div-avatar">
+                <picture class="div-avatar">
                   <img src=${src} />
                   <p class="text-username">${name}</p>
-                </div>  
+                </picture>  
                 `;        
       };
 
@@ -69,6 +73,13 @@
       $app.innerHTML += Avatar({id: 25, gender: 'women', name: 'Manuela'});
       $app.innerHTML += Avatar({id: 66, gender: 'women', name: 'Linda'});
       $app.innerHTML += Avatar({id: 18, gender: 'men', name: 'Luis Jose'});
+      $app.innerHTML += Avatar({id: 28, gender: 'women', name: 'Giselle'});
+      $app.querySelectorAll('picture').forEach(picture => {
+        picture.addEventListener('click', () => {
+          picture.classList.toggle('disabled')
+        })
+      });
+      
     </script>
   </body>
 </html>

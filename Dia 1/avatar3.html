@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Dia 1) | 3.- Crear un Avatar con html y React Puro</title>
+
+    <link href="css/avatar.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1
+      style="
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      "
+    >
+      AVATAR CON REACT PURO (SIN WEBPACK NI JSX) - 3er. Ejercicio
+    </h1>
+    <hr />
+    <div class="avatar-container" id="app"></div>
+
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.js"></script>
+    <script>
+      const $app = document.getElementById("app");
+      const el = React.createElement;
+
+      const Avatar = (params) => {
+      
+        const src = `https://randomuser.me/api/portraits/${params.gender}/${params.id}.jpg`;
+
+        return el("img", { src }); 
+      };
+
+      const AvatarName = ({ name }) => {
+      
+        return el("p", { className: "text-username" }, name);
+      
+      };
+
+      /** 
+       * Se puede realizar la renderización de un arreglo de elementos React, usando como este ejemplo
+       * una variable con cada elemento y luego pasarlo como parametro del Render.
+      */
+      const arrElements =[
+        el(
+          "picture",
+          { className: "div-avatar" },
+          el(Avatar, { key: "1av", id: 12, gender: "women" }),
+          el(AvatarName, { key: "1avnm", name: "Patricia" })
+        ),
+        el(
+          "picture",
+          { className: "div-avatar" },
+          el(Avatar, { key: "2av", id: 31, gender: "men" }),
+          el(AvatarName, { key: "2avnm", name: "Carlos" })
+        ),
+        el(
+          "picture",
+          { className: "div-avatar" },
+          el(Avatar, { key: "3av", id: 25, gender: "women" }),
+          el(AvatarName, { key: "3avnm", name: "Manuela" })
+        ),
+        el(
+          "picture",
+          { className: "div-avatar" },
+          el(Avatar, { key: "4av", id: 66, gender: "women" }),
+          el(AvatarName, { key: "4avnm", name: "Linda" })
+        ),
+        el(
+          "picture",
+          { className: "div-avatar" },
+          el(Avatar, { key: "5av", id: 18, gender: "men" }),
+          el(AvatarName, { key: "5avnm", name: "Luis Jose" })
+        ),
+        el(
+          "picture",
+          { className: "div-avatar" },
+          el(Avatar, { key: "6av", id: 28, gender: "women" }),
+          el(AvatarName, { key: "6avnm", name: "Giselle" })
+        ),
+      ];
+
+      ReactDOM.render(arrElements, $app); 
+
+      /***********************************************************************************************
+       *  O bien sin usar variable y pasarlos directamente el arreglo dentro de la uncion render
+       * 
+      *************************************************************************************************/
+      // ReactDOM.render([
+      //   el(
+      //     "picture",
+      //     { className: "div-avatar" },
+      //     el(Avatar, { key: "1av", id: 12, gender: "women" }),
+      //     el(AvatarName, { key: "1avnm", name: "Patricia" })
+      //   ),
+      //   el(
+      //     "picture",
+      //     { className: "div-avatar" },
+      //     el(Avatar, { key: "2av", id: 31, gender: "men" }),
+      //     el(AvatarName, { key: "2avnm", name: "Carlos" })
+      //   ),
+      //   el(
+      //     "picture",
+      //     { className: "div-avatar" },
+      //     el(Avatar, { key: "3av", id: 25, gender: "women" }),
+      //     el(AvatarName, { key: "3avnm", name: "Manuela" })
+      //   ),
+      //   el(
+      //     "picture",
+      //     { className: "div-avatar" },
+      //     el(Avatar, { key: "4av", id: 66, gender: "women" }),
+      //     el(AvatarName, { key: "4avnm", name: "Linda" })
+      //   ),
+      //   el(
+      //     "picture",
+      //     { className: "div-avatar" },
+      //     el(Avatar, { key: "5av", id: 18, gender: "men" }),
+      //     el(AvatarName, { key: "5avnm", name: "Luis Jose" })
+      //   ),
+      //   el(
+      //     "picture",
+      //     { className: "div-avatar" },
+      //     el(Avatar, { key: "6av", id: 28, gender: "women" }),
+      //     el(AvatarName, { key: "6avnm", name: "Giselle" })
+      //   ),
+      // ],
+      //   $app,
+      // );
+    </script>
+  </body>
+</html>
