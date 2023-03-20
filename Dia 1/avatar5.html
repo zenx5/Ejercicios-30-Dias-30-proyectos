@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      (Dia 1) | 5.- Crear un Avatar con html y React JSX (Usando State)
+    </title>
+
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/avatar.css" rel="stylesheet" />
+    <link href="css/page.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="title-h1">AVATAR CON REACT JSX USANDO STATE - 5to. Ejercicio</h1>
+    <hr />
+    <div class="avatar-container" id="app"></div>
+
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.js"></script>
+    <script type="text/babel">
+      const $app = document.getElementById("app");
+
+      const Avatar = ({ id, gender, name, size }) => {
+        const [isDisabled, setIsDisabled] = React.useState(false);
+
+        const src = `https://randomuser.me/api/portraits/${gender}/${id}.jpg`;
+
+        const avatarDisabled = isDisabled
+          ? "div-avatar disabled"
+          : "div-avatar";
+
+        function handleClick(e) {
+          return setIsDisabled(!isDisabled);
+        }
+
+        function selectedSize(value) {
+          if (value === "small") {
+            return "is-small";
+          } else if (value === "large") {
+            return "is-large";
+          } else{
+            return "";
+          }
+        }
+
+        const imgSize = selectedSize(size);
+        
+       
+        return ( id
+              ? (<picture className={avatarDisabled} onClick={handleClick}>
+                  <img src={src} className={imgSize} />
+                  <p className="text-username"> {name} <br /> {isDisabled ?  "disabled" : ""} </p>
+                </picture>) 
+              : (<picture className="div-avatar" >
+                  <img src="https://dummyimage.com/128x128/d4d4d4/000" className={imgSize} />
+                  <p className="text-username"> No image </p>
+                </picture>)
+          
+        );
+      };
+
+      const arrElements = [
+        <Avatar key="1av" id={12} gender="women"name="Patricia" size="small" />,
+
+        <Avatar key="2av" id={31} gender="men" name="Carlos" />,
+
+        <Avatar key="3av" id={25} gender="women" name="Manuela" />,
+
+        <Avatar key="4av" id={66} gender="women" name="Linda" size="large" />,
+
+        <Avatar key="5av" id={18} gender="men" name="Luis Jose"  />,
+
+        <Avatar key="6av" id={28} gender="women" name="Giselle"  />,
+
+        <Avatar key="7av"  />,
+      ];
+
+      ReactDOM.render(arrElements, $app);
+
+    </script>
+  </body>
+</html>

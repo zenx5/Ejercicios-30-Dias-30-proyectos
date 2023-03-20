@@ -1,10 +1,19 @@
 img {
   box-shadow: 0 0 15px #9a0b33;
-  border-radius: 50%;
+  border-radius: 50%; 
+  width: 96px; 
+  height: 96px;
+}
+img.is-small {
+  width: 56px;
+  height: 56px;
+}
+img.is-large {
+  width: 136px;
+  height: 136px;
 }
 .avatar-container {
-  display: flex;
-  width: 100%;
+  display: flex; 
   justify-content: center;
 }
 .div-avatar {
@@ -12,12 +21,9 @@ img {
   border-color: black;
   border-style: double;
   border-radius: 15px;
-
   box-shadow: 1px 1px 20px rgb(19, 37, 139);
-  padding: 15px;
-  margin: 15px;
-  justify-items: center;
-  align-items: center;
+  padding: 8px;
+  margin: 8px;
 }
 .text-username {
   font-size: 18px;
