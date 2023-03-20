@@ -82,8 +82,14 @@
           el(AvatarName, { key: "6avnm", name: "Giselle" })
         ),
       ];
-
+      
       ReactDOM.render(arrElements, $app); 
+      
+      $app.querySelectorAll('picture').forEach(picture => {
+        picture.addEventListener('click', () => {
+          picture.classList.toggle('disabled')
+        })
+      });
 
       /***********************************************************************************************
        *  O bien sin usar variable y pasarlos directamente el arreglo dentro de la uncion render

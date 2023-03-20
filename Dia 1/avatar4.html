@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Dia 1) | 4.- Crear un Avatar con html y React JSX</title>
+
+    <link href="css/avatar.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1
+      style="
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      "
+    >
+      AVATAR CON REACT JSX - 4to. Ejercicio
+    </h1>
+    <hr />
+    <div class="avatar-container" id="app"></div>
+
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.js"></script>
+    <script type="text/babel">
+      const $app = document.getElementById("app");
+
+      const Avatar = ({ id, gender, name }) => {
+        const src = `https://randomuser.me/api/portraits/${gender}/${id}.jpg`;
+
+        return 
+          <picture className="div-avatar" onClick={event => {event.target.classList.toggle('disabled')}} >
+            <img src={src} />
+            <p className="text-username"> {name} </p>;
+          </picture>
+       // return <img src={src} />;
+      };
+
+      const AvatarName = ({ name }) => {
+        return <p className="text-username"> {name} </p>;
+      };
+
+      function handleClick(e) {        
+        return e.target.classList.toggle('disabled');
+      }
+
+      const arrElements = [
+      <picture className="div-avatar" onClick={event => {event.target.classList.toggle('disabled')}} >
+        <Avatar key="1av" id={12} gender="women" />
+        <AvatarName key="1avnm" name="Patricia" />
+      </picture>,
+
+      <div className="div-avatar" onClick={handleClick} >
+        <Avatar key="2av" id={31} gender="men" />
+        <AvatarName key="2avnm" name="Carlos" />
+      </div>,
+
+      <div className="div-avatar" onClick={event => {event.target.classList.toggle('disabled')}} >
+        <Avatar key="3av" id={25} gender="women" />
+        <AvatarName key="3avnm" name="Manuela" />
+      </div>,
+
+      <div className="div-avatar" onClick={handleClick} >
+        <Avatar key="4av" id={66} gender="women" />
+        <AvatarName key="4avnm" name="Linda" />
+      </div>,
+
+      <div className="div-avatar" onClick={event => {event.target.classList.toggle('disabled')}} >
+        <Avatar key="5av" id={18} gender="men" />
+        <AvatarName key="5avnm" name="Luis Jose" />
+      </div>,
+
+      <div className="div-avatar" onClick={handleClick} >
+        <Avatar key="6av" id={28} gender="women" />
+        <AvatarName key="6avnm" name="Giselle" />
+      </div>,
+      ];
+
+      ReactDOM.render(arrElements, $app);
+
+   
+      // ReactDOM.render(
+      //   [
+      //     <picture className="div-avatar">
+      //       <Avatar key="1av" id={12} gender="women" />
+      //       <AvatarName key="1avnm" name="Patricia" />
+      //     </picture>,
+
+      //     <div className="div-avatar">
+      //       <Avatar key="2av" id={31} gender="men" />
+      //       <AvatarName key="2avnm" name="Carlos" />
+      //     </div>,
+
+      //     <div className="div-avatar">
+      //       <Avatar key="3av" id={25} gender="women" />
+      //       <AvatarName key="3avnm" name="Manuela" />
+      //     </div>,
+
+      //     <div className="div-avatar">
+      //       <Avatar key="4av" id={66} gender="women" />
+      //       <AvatarName key="4avnm" name="Linda" />
+      //     </div>,
+
+      //     <div className="div-avatar">
+      //       <Avatar key="5av" id={18} gender="men" />
+      //       <AvatarName key="5avnm" name="Luis Jose" />
+      //     </div>,
+
+      //     <div className="div-avatar">
+      //       <Avatar key="6av" id={28} gender="women" />
+      //       <AvatarName key="6avnm" name="Giselle" />
+      //     </div>,
+      //   ],
+      //   $app
+      // );
+    </script>
+  </body>
+</html>
