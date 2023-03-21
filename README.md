@@ -1,7 +1,6 @@
-
+<p align="center">
 ![Alexis Mata Logo][logo]
-
-[logo]: Alexis-Mata-Logo.png 
+</p>
 ___
 
 Soy un desarrollador, tanto frontend como backend, y con entusiasmo por seguiré creciendo en mi carrera para poder fortalecer mi aprendizaje en las nuevas tecnología y herramientas que desde muchos años han estado evolucionando para dar mejores soluciones inform´ñaticas.
@@ -25,3 +24,4 @@ Este repositorio contendrá cada ejercicio, ejemplos y alguno que otro proyecto 
 
 Asi como también algún proyecto realizado por mi cuenta con lo aprendido.
 
+[logo]: Alexis-Mata-Logo.png 
