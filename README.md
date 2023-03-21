@@ -18,7 +18,7 @@ Tomando en cuenta que soy un estudiante autodidacta, he ido viendo una cantidad 
 La forma como explican sus conocimientos sobre esta librería es muy buena y completa. ¡Lo recomiendo 100%!
 
 ___
-#30 Días y 30 Proyectos | Aprendiendo desde 0 React.JS
+# 30 Días y 30 Proyectos | Aprendiendo desde 0 React.JS
 ___
 
 Este repositorio contendrá cada ejercicio, ejemplos y alguno que otro proyecto con el cual estaré practicando segun vaya avanzando en los videos tutoriales. 
