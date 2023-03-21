@@ -1,6 +1,4 @@
-<p align="center">
-![Alexis Mata Logo] (Alexis-Mata-Logo.png) 
-</p>
+![Alexis Mata Logo]
 ___
 
 Soy un desarrollador, tanto frontend como backend, y con entusiasmo por seguiré creciendo en mi carrera para poder fortalecer mi aprendizaje en las nuevas tecnología y herramientas que desde muchos años han estado evolucionando para dar mejores soluciones inform´ñaticas.
@@ -18,10 +16,10 @@ La forma como explican sus conocimientos sobre esta librería es muy buena y com
 
 ___
 # 30 Días y 30 Proyectos | Aprendiendo desde 0 React.JS
-___
 
 Este repositorio contendrá cada ejercicio, ejemplos y alguno que otro proyecto con el cual estaré practicando segun vaya avanzando en los videos tutoriales. 
 
 Asi como también algún proyecto realizado por mi cuenta con lo aprendido.
 
 
+[Alexis Mata Logo]: ./Alexis-Mata-Logo.png
