@@ -1,5 +1,5 @@
 <p align="center">
-![Alexis Mata Logo](Alexis-Mata-Logo.png) 
+![Alexis Mata Logo] (Alexis-Mata-Logo.png) 
 </p>
 ___
 
