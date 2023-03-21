@@ -1,5 +1,5 @@
 <p align="center">
-![Alexis Mata Logo][logo]
+![Alexis Mata Logo](Alexis-Mata-Logo.png) 
 </p>
 ___
 
@@ -24,4 +24,4 @@ Este repositorio contendrá cada ejercicio, ejemplos y alguno que otro proyecto 
 
 Asi como también algún proyecto realizado por mi cuenta con lo aprendido.
 
-[logo]: Alexis-Mata-Logo.png 
+
