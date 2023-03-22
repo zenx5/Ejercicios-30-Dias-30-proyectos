@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import GifElement from "./components/GifElement";
 
 import "./css/App.css";
 import getGifs from "./services/getGifs";
@@ -15,14 +16,7 @@ export default  function App() {
       <section className="App-content">
         {gifs.map((gifItem) => {
           return (
-            <picture>
-              <img
-                key={gifItem.id}
-                src={gifItem.url_medium_size}
-                alt={gifItem.title}                
-              />
-              <h4>{gifItem.title}</h4>
-            </picture>
+            <GifElement key={gifItem.id} id={gifItem.id} url={gifItem.url_medium_size} title={gifItem.title} />            
           );
         })}
       </section>

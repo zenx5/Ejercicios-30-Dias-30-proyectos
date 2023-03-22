@@ -1,0 +1,13 @@
+
+img {
+  padding: 5px; 
+  width: 320px;
+  height: 390px;
+  border-radius: 15px;
+}
+.text-title {
+  padding: 4px;
+  font-size: 14px; 
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+  text-align: center;
+} 
