@@ -1,0 +1,65 @@
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin: 20px;
+}
+
+
+.search-box > div {
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 1px #0091c2);
+}
+
+.search-box > div:after {
+  content: "";
+  background: white;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  transform: rotate(135deg);
+}
+
+.search-box > div > input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px white;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+.search-box > button {
+  color: #efefef;
+  opacity: 1;
+  font-size: 20px;
+  background: transparent;
+  width: 35px;
+  height: 25px;
+  padding: 7px;
+  border: none;
+  outline: none; 
+}
+
+.search-box > div > input::placeholder {
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+ 
+
+.search-box > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search-box > div > input:focus,
+.search-box > div > input:not(:placeholder-shown) {
+  width: 300px;
+}
+

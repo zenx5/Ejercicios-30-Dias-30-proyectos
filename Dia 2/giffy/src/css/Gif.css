@@ -1,13 +1,21 @@
+.container {  
+  display: grid; 
+  margin: 12px;  
+  border-color: rgb(248, 252, 40);
+  border-width: 2px;
+  border-style: double;
+  border-radius: 15px;
+  box-shadow: 1px 1px 20px rgb(241, 237, 237);  
+}
 
 img {
-  padding: 5px; 
-  width: 320px;
-  height: 390px;
+  padding: 9px; 
+  width: 240px;
+  height: 320px;
   border-radius: 15px;
 }
-.text-title {
-  padding: 4px;
-  font-size: 14px; 
+.text-title { 
+  font-size: 14px;  
   font-family: Tahoma, Verdana, Geneva, sans-serif;
   text-align: center;
 } 
