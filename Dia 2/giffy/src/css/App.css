@@ -2,22 +2,30 @@
   text-align: center;
 }
 
-.App-content { 
-  display: flex; 
-  flex-wrap: wrap; 
+.App-content {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  background-color: #282c34;  
-  min-height: 100vh; 
+  background-color: #282c34;
+  min-height: 100vh;
   color: white;
 }
 
-
-
 .Searchtext-container {
-  background: linear-gradient(180deg, #282c34, #5e50f5, #282c34  );
+  background: linear-gradient(180deg, #282c34, #5e50f5, #282c34);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Searchtext-title {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  width: 100%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: x-large;
+  font-weight: 700;
 }

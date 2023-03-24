@@ -1,10 +1,9 @@
-.search-box{
+.search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
   margin: 20px;
 }
-
 
 .search-box > div {
   display: inline-block;
@@ -44,7 +43,7 @@
   height: 25px;
   padding: 7px;
   border: none;
-  outline: none; 
+  outline: none;
 }
 
 .search-box > div > input::placeholder {
@@ -52,7 +51,6 @@
   opacity: 0;
   transition: opacity 150ms ease-out;
 }
- 
 
 .search-box > div > input:focus::placeholder {
   opacity: 1;
@@ -62,4 +60,3 @@
 .search-box > div > input:not(:placeholder-shown) {
   width: 300px;
 }
-

@@ -1,25 +1,29 @@
 import { useState } from "react";
 import "../css/SearchTextBox.css";
 
-export default function SearchTextBox() {
+export default function SearchTextBox({ onSearch }) {
   const [keyword, setKeyword] = useState("");
-
-  function handleOnSubmit(event) {
-    event.preventDefault();
-    console.log('cambiando keyword: ' + keyword);
-  }
 
   function handleOnChange(event) {
     setKeyword(event.target.value);
   }
 
+  function handleOnClick() {
+    onSearch(keyword);
+    setKeyword("");
+  }
+
   return (
-    <div className="search-box"> 
+    <div className="search-box">
       <div>
-        <input type="text" onChange={handleOnChange} placeholder=". . ." required />
-        
+        <input
+          type="text"
+          onChange={handleOnChange}
+          placeholder=". . ."
+          value={keyword}
+        />
       </div>
-      <button type="submit" onClick={handleOnSubmit}>Go!</button>
+      <button onClick={handleOnClick}> GO! </button>
     </div>
   );
 }
