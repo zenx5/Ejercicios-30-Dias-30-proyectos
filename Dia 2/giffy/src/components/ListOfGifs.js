@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link, Route } from "wouter";
 import getGifs from "../services/getGifs";
 import GifElement from "./GifElement";
+import SingleGif from "./SingleGif";
+
 
 /**
  * Este componente se encargara exclusivamente del comportamiento del renderizado de la lista de Gifs,
@@ -15,11 +18,17 @@ export default function ListOfGifs({ keyword }) {
   }, [keyword]);
 
   return gifs.map((gifItem) => (
-    <GifElement
-      key={gifItem.id}
-      id={gifItem.id}
-      url={gifItem.url_medium_size}
-      title={gifItem.title}
-    />
+    <>
+      <GifElement
+        key={gifItem.id}
+        id={gifItem.id}
+        url={gifItem.url_medium_size}
+        title={<Link to={`/gif/${gifItem.id}`}> {gifItem.title}</Link>}
+      />
+      <Route
+        path="/gif/:id"
+        component={SingleGif}
+      />
+    </>
   ));
 }
