@@ -2,7 +2,9 @@ import "../css/Gif.css";
 
 /**
  * Este es el componente que renderizará cada gif obtenido a traves de la capa de servicio "getGifs".
- * @param {id, title, url} param
+ * @param {id} id bla bla bla
+ * @param {title} titulo bla bla bla
+ * @param {url} url bla bla bla
  */
 export default function GifElement({ id, title, url, original_size }) {
   return (
